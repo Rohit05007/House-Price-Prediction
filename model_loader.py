@@ -1,15 +1,16 @@
-import gdown
+import os
 import joblib
+import gdown
 
 def load_model():
 
-    # 🔥 Paste your Google Drive link here
-    url = "YOUR_GOOGLE_DRIVE_LINK"
-
+    url = "https://drive.google.com/uc?export=download&id=1XHAIlEX25dWUKT25-aMkTRn-XnH_ZFfJ"
     output = "house_price_model.pkl"
 
-    gdown.download(url, output, quiet=False)
+    if not os.path.exists(output):
+        gdown.download(url, output, quiet=False)
 
+    # Load model
     model = joblib.load(output)
 
     return model
