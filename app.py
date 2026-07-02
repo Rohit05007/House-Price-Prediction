@@ -9,7 +9,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("🏠 House Price Prediction AI App")
+st.title("🏠 House Price Prediction App")
 st.write("Fill all details carefully before prediction")
 
 # ---------------- LOAD MODEL ----------------
